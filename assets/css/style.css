@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 html{
     font-family: 'Roboto', sans-serif;
@@ -75,6 +75,7 @@ html{
     height: 100%;
     display: block;
     fill: #6E6E6E;
+    margin-right: 5px;
 }
 .fast-menù>li>span{
     font-size: larger;
@@ -116,10 +117,11 @@ html{
 }
 .side-menù-bottom{
     display: flex;
+    height: 100%;
+    margin-bottom: 105px;
     flex-direction: column;
-    margin-top: 30vh;
     justify-content: flex-end;
-    padding: 10px;
+    padding: 0px 20px;
     border: 1px solid green;
 } 
 #download-app{
@@ -143,7 +145,8 @@ html{
     border-radius: 50%;
 }
 #user>span{
-    font-weight: bolder;
+    font-weight: 900;
+    color: white;
 }
 .side-menù-bottom>hr{
     margin: 10px 0px;
@@ -152,26 +155,35 @@ html{
 #side-menù-top-mobile{
     display:none;
 }
-
+#side-menù-bottom-mobile{
+    display: none;
+}
 /* SECTION FOOTER */
 .player-container{
-    height: 10vh;
+    height: 100px;
     background-color: #282828;
     position: fixed;
     left: 0;
     bottom: 0;
     right: 0;
 }
+
+
+
+
 /* ANCHOR SIZE - M */
 @media screen and (max-width:768px) {
+/* SECTION */
 
 }
 /* ANCHOR SIZE - S*/
 @media screen and (max-width:640px) {
+/* SECTION*/
 }
 
 /* ANCHOR SIZE - XS */
 @media screen and (max-width:375px) {
+/* SECTION 1*/
     .side-menù{
         height: 100vh;
         width: 50px;
@@ -193,16 +205,19 @@ html{
         margin-top: 5px;
     }
     #side-menù-bottom-mobile{
-        margin-top: 65vh;
-    }
-    #side-menù-bottom-mobile{
-        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+        padding-bottom: 100px;
     }
     #download-img{
         padding: 2px;
     }
     #user-img{
         background-color: #6E6E6E;
+        padding: 2px;
         border-radius: 50%;
     }
 }
