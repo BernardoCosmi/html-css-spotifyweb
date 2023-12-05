@@ -32,16 +32,16 @@ html{
 /* SECTION 1*/
 .side-menù{
     height: 100vh;
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    width: 200px;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
 }
 #logo{
     width: 100%;
@@ -49,7 +49,12 @@ html{
 }
 #logo > img{
     height: 100%;
-    padding: 15px;
+    padding: 20px;
+}
+.side-menù-top{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .fast-menù{
     display: flex;
@@ -89,16 +94,15 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     color: #6E6E6E;
     font-weight: 800;
 }
 #new-playlist{
     display: flex;
     align-items: center;
-    font-size: large;
+    font-size: 110%;
 }
-
 #new-playlist > div{
     display: inline-block;
     background-color: #a3a3a3;
@@ -110,3 +114,97 @@ html{
     font-size: xx-large;
     margin-right: 10px;
 }
+.side-menù-bottom{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30vh;
+    justify-content: flex-end;
+    padding: 10px;
+    border: 1px solid green;
+} 
+#download-app{
+    display: flex;
+    align-items: center;
+    color: #6E6E6E;
+}
+#download-app>img{
+    max-width: 15%;
+    margin-right: 10px;
+}
+#user{
+    display: flex;
+    align-items: center;
+    color: #6E6E6E;
+}
+#user>img{
+    max-width: 15%;
+    margin-right: 10px;
+    background-color: #6E6E6E;
+    border-radius: 50%;
+}
+#user>span{
+    font-weight: bolder;
+}
+.side-menù-bottom>hr{
+    margin: 10px 0px;
+    border: 1px solid #6E6E6E;
+}
+#side-menù-top-mobile{
+    display:none;
+}
+
+/* SECTION FOOTER */
+.player-container{
+    height: 10vh;
+    background-color: #282828;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+/* ANCHOR SIZE - M */
+@media screen and (max-width:768px) {
+
+}
+/* ANCHOR SIZE - S*/
+@media screen and (max-width:640px) {
+}
+
+/* ANCHOR SIZE - XS */
+@media screen and (max-width:375px) {
+    .side-menù{
+        height: 100vh;
+        width: 50px;
+        padding:5px;
+    }
+    #logo{
+       display: none; 
+    }
+    .side-menù-top{
+        display: none;
+    }
+    .side-menù-bottom{
+        display:none;
+    }
+    #side-menù-top-mobile{
+        display:contents;
+    }
+    #side-menù-top-mobile>img{
+        margin-top: 5px;
+    }
+    #side-menù-bottom-mobile{
+        margin-top: 65vh;
+    }
+    #side-menù-bottom-mobile{
+        margin-bottom: 5px;
+    }
+    #download-img{
+        padding: 2px;
+    }
+    #user-img{
+        background-color: #6E6E6E;
+        border-radius: 50%;
+    }
+}
+
+
