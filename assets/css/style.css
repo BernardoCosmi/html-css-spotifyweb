@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 html{
     font-family: 'Roboto', sans-serif;
@@ -166,9 +166,44 @@ html{
     left: 0;
     bottom: 0;
     right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-
+.song{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    min-height: 90%;
+}
+.player{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    min-height: 90%;
+}
+.player div:first-child{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    min-height: 20px;
+}
+.player div:last-child{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 20px;
+}
+.controll{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    min-height: 90%;
+}
 
 
 /* ANCHOR SIZE - M */
