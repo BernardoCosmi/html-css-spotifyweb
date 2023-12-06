@@ -6,14 +6,23 @@
     box-sizing: border-box;
     border: 1px solid red;
 }
+.clearfix::after{
+    content:"";
+    display: table;
+    clear: both;
+}
 html{
     font-family: 'Roboto', sans-serif;
 }
 
 /* SECTION 0*/
 .upgrade{
-    width:100vw;
+    width:100%;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 90px;
     justify-content: flex-end;
     align-items: center;
@@ -118,10 +127,10 @@ html{
 .side-menù-bottom{
     display: flex;
     height: 100%;
-    margin-bottom: 105px;
+    margin-bottom: 100px;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 0px 20px;
+    padding: 10px 20px;
     border: 1px solid green;
 } 
 #download-app{
@@ -172,52 +181,158 @@ html{
 }
 .song{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 200px;
-    min-height: 90%;
+    gap: 5px;
+    height: 90%;
+    width: 30%;
+    margin:0px 10px;
+}
+.song-name{
+    display: flex;
+    align-items: center;
+}
+.song-name>figure{
+    object-fit: cover;
+    width: auto;
+    max-height: 60px;
+    max-width: 60px;
+}
+.song-name>figure>img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.song-name{
+    display: flex;
+    font-size: smaller;
+    gap: 5px;
+    margin-right: 1%;
+}
+.song-name>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 60%;
+}
+.song-name>div> a{
+    color:#6E6E6E;
+    text-decoration: none;
+}
+#song_name{
+    color: white;
+    font-weight: 900;
+}
+.favourite{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 80%;
+}
+.favourite>span{
+    max-width: 20px;
+    max-height: 20px;
+    fill: #6E6E6E;
+}
+.favourite>span>svg{
+    height: 100%;
+    width: 100%;
+    display: block;
 }
 .player{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 600px;
+    width: 45%;
     min-height: 90%;
 }
-.player div:first-child{
+.player-control{
     display: flex;
-    width: 50%;
+    width: 150px;
+    gap: 10px;
     justify-content: space-around;
     min-height: 20px;
 }
-.player div:last-child{
+.player-control > button{
+    background-color:#282828;
+    border: 0;
+    fill: white;
+}
+#play-button{
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#play-button>svg{
+    margin-left: 2px;
+}
+.progress-bar-container{
     display: flex;
     width: 100%;
     justify-content: space-between;
-    min-height: 20px;
-}
-.controll{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 200px;
-    min-height: 90%;
+    min-height: 20px;
+    gap: 20px;
+    color: white;
+    font-size: small;
+    font-weight: bold;
 }
-
+.progress-bar-grey{
+    height: 3px;
+    width: 90%;
+    background-color: #6E6E6E;
+    border-radius: 5px;
+}
+.progress-bar-white{
+    height: 4px;
+    width: 40%;
+    background-color: white;
+    border-radius: 5px;
+}
+.general-control{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+    min-height: 90%;
+    margin:0px 10px;
+    fill:white;
+    gap: 10px;
+}
+.general-control>span>svg{
+    display: block;
+}
+.volume-bar-grey{
+    height: 3px;
+    width: 40%;
+    background-color: #6E6E6E;
+    border-radius: 5px;
+}
+.volume-bar-white{
+    height: 4px;
+    width: 40%;
+    background-color: white;
+    border-radius: 5px;
+}
 
 /* ANCHOR SIZE - M */
 @media screen and (max-width:768px) {
-/* SECTION */
 
 }
 /* ANCHOR SIZE - S*/
 @media screen and (max-width:640px) {
-/* SECTION*/
+
+/* SECTION FOOTER */
+    .favourite{
+        flex-wrap: wrap;
+    }
 }
 
 /* ANCHOR SIZE - XS */
-@media screen and (max-width:375px) {
+@media screen and (max-width:425px) {
 /* SECTION 1*/
     .side-menù{
         height: 100vh;
@@ -255,6 +370,20 @@ html{
         padding: 2px;
         border-radius: 50%;
     }
+
+    
+/* SECTION FOOTER */
+    .song{
+        margin: 0 2px;
+        min-width: 100px;
+    }
+    .song-name{
+        margin-right: 1px;
+    }
+    .song-name>div{
+        font-size: smaller;
+    }
+    .general-control{
+        margin: 0 2px;
+    }
 }
-
-
