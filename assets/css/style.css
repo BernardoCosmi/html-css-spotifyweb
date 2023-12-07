@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .clearfix::after{
     content:"";
@@ -132,7 +132,6 @@ html{
     flex-direction: column;
     justify-content: flex-end;
     padding: 10px 20px;
-    border: 1px solid green;
 } 
 #download-app{
     display: flex;
@@ -167,6 +166,99 @@ html{
 }
 #side-menù-bottom-mobile{
     display: none;
+}
+/* SECTION 2.1 - SONG*/
+.general-container{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin-top: 89px;
+    margin-left: 199px;
+    z-index: -1;
+    background-color: #141922;
+    min-height:fit-content;
+}
+.nav-menù{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    color:#6E6E6E;
+    gap: 10px;
+    padding: 20px;
+    font-size: small;
+    row-gap: 30px;
+}
+.recently-played>h1{
+    color: white;
+    padding:20px;
+}
+.song-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    padding-left:20px;
+    gap: 10px;
+}
+.song-card{
+    width: calc((100%)/6 - 10px);
+    text-align: center;
+}
+.song-card>figure{
+    width: 100%;
+}
+.song-card>figure>img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.song-card>h3{
+    padding: 10px 0 0;
+}
+.song-card>h4{
+    color: #6E6E6E;
+    padding: 5px;
+}
+/* SECTION 2.2 - MIX*/
+.for-you-container{
+    margin-top: 20px;
+    color: white;
+}
+.for-you-container>h1{
+    padding: 20px 20px 10px;
+}
+.for-you-container>p{
+    padding: 0 20px;
+    color: #6E6E6E;
+}
+.for-you{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+/* SECTION 2.3 - ARTIST*/
+.popular-artist-container{
+    margin-top: 20px;
+    color: white;
+    padding-bottom: 110px;
+}
+.popular-artist-container>h1{
+    padding: 20px 20px 10px;
+}
+.popular-artist-container>p{
+    padding: 0 20px;
+    color: #6E6E6E;
+}
+.popular-artist{
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+.song-card.artist>figure>img{
+    border-radius: 50%;
 }
 /* SECTION FOOTER */
 .player-container{
@@ -318,67 +410,10 @@ html{
     background-color: white;
     border-radius: 5px;
 }
-/* SECTION 2.1*/
-.general-container{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    margin-top: 90px;
-    margin-left: 200px;
-    padding-bottom: 150px;
-    z-index: -1;
-    background-color: #141922;
-}
-.nav-menù{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    flex-wrap: wrap;
-    color:#6E6E6E;
-    gap: 10px;
-    padding: 20px;
-    font-size: small;
-    row-gap: 30px;
-}
-.recently-played>h1{
-    color: white;
-    padding:20px;
-}
-.song-cards-container{
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-    padding-left:20px;
-    gap: 10px;
-}
-.song-card{
-    width: calc((100%)/6 - 10px);
-    text-align: center;
-}
-.song-card>figure{
-    width: 100%;
-}
-.song-card>figure>img{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.song-card>h3{
-    padding: 10px 0 0;
-}
-.song-card>h4{
-    color: #6E6E6E;
-    padding: 5px;
-}
-
-
 
 /* ANCHOR SIZE - M */
 @media screen and (max-width:768px) {
-/* SECTION 2.1 */
+/* SECTION 2.1 - SONG*/
     .song-card{
         width: calc((100%)/4 - 20px);
     }
@@ -396,7 +431,7 @@ html{
 }
 /* ANCHOR SIZE - S*/
 @media screen and (max-width:640px) {
-/* SECTION 2.1 */
+/* SECTION 2.1 - SONG*/
     .general-container{
         min-height:fit-content;
     }
@@ -415,7 +450,7 @@ html{
 
 
 
-/* SECTION FOOTER */
+/* SECTION - FOOTER */
     .favourite{
         flex-wrap: wrap;
     }
@@ -460,7 +495,7 @@ html{
         padding: 2px;
         border-radius: 50%;
     }
-/* SECTION 2.1 */
+/* SECTION 2.1 - SONG*/
     .general-container{
         margin-left: 50px;
     }
@@ -476,7 +511,15 @@ html{
         padding: 5px;
         font-size: smaller;
     }
+/* SECTION 2.2 - MIX*/
+    .for-you-container>p{
+        font-size: small;
+    }
+/* SECTION 2.3 - ARTIST */
 
+    .popular-artist-container>p{
+        font-size: small;
+    }
 /* SECTION FOOTER */
     .song{
         margin: 0 2px;
